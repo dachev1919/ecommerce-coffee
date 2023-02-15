@@ -1,0 +1,28 @@
+.search {
+	@apply relative w-1/3;
+
+	> div {
+		@apply relative;
+	}
+
+	&::before {
+		content: '';
+		@apply absolute bg-light-green rounded-full w-[110%] pt-[110%] -top-[15rem] -left-[5%];
+	}
+	&__input {
+		width: 70% !important;
+		outline: none!important;
+		@apply block m-auto border-t-transparent border-l-transparent border-r-transparent;
+		input {
+			box-shadow: none!important;
+			border-top: none!important;
+			border-left: none!important;
+			border-right: none!important;
+			color: #afafaf;
+			@apply rounded-none uppercase tracking-widest border-gray-100 hover:border-gray-200 focus-visible:border-gray-300;
+		}
+		svg {
+			transform: scale(-1, 1)
+		}
+	}
+}

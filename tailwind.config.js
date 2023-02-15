@@ -9,10 +9,14 @@ const constants = {
 	black: '#222222',
 	white: '#ffffff',
 	'light-gray': '#E8E7E3',
+	'gray-100': '#afafaf',
+	'gray-200': '#929292',
+	'gray-300': '#757575',
 	beige: '#A49B8F'
 };
 
 module.exports = {
+	important: true,
 	content: ['./src/**/*.{js, jsx, ts,tsx}', './pages/**/*.{js, ts, jsx, tsx}'],
 	theme: {
 		colors: {

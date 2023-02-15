@@ -21,6 +21,9 @@
     "jsx": "preserve",
     "baseUrl": "./src/",
     "paths": {
+      "@/common/*": [
+        "common/*"
+      ],
       "@/layout/*": [
         "components/layout/*"
       ],

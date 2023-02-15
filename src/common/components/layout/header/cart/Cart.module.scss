@@ -1,0 +1,13 @@
+.cart {
+  @apply flex items-center gap-4 cursor-pointer;
+  line-height: 100%;
+
+  span {
+    @apply flex items-center justify-center bg-red rounded-full text-white w-4 h-4 text-[0.5rem];
+    line-height: 100%;
+  }
+  p {
+    @apply tracking-widest uppercase;
+    line-height: 100%;
+  }
+}

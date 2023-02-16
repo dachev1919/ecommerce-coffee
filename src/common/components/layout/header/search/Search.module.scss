@@ -14,12 +14,7 @@
 		outline: none!important;
 		@apply block m-auto border-t-transparent border-l-transparent border-r-transparent;
 		input {
-			box-shadow: none!important;
-			border-top: none!important;
-			border-left: none!important;
-			border-right: none!important;
-			color: #afafaf;
-			@apply rounded-none uppercase tracking-widest border-gray-100 hover:border-gray-200 focus-visible:border-gray-300;
+			@apply uppercase tracking-widest border-gray-100;
 		}
 		svg {
 			transform: scale(-1, 1)

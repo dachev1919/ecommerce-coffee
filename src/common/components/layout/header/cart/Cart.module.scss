@@ -1,13 +1,31 @@
 .cart {
-  @apply flex items-center gap-4 cursor-pointer;
-  line-height: 100%;
-
-  span {
-    @apply flex items-center justify-center bg-red rounded-full text-white w-4 h-4 text-[0.5rem];
-    line-height: 100%;
+  .heading {
+    @apply flex items-center gap-1;
+    .badge {
+      @apply w-4 h-4 flex items-center justify-center bg-red text-[.6rem] text-white rounded-full mr-2;
+    }
+    .text {
+      @apply tracking-widest uppercase;
+    }
   }
-  p {
-    @apply tracking-widest uppercase;
-    line-height: 100%;
+}
+
+.item {
+  @apply flex gap-2 mb-4;
+  .name {
+    @apply tracking-widest font-bold break-all font-semibold;
+  }
+  .price {
+    @apply text-sm text-beige mt-1;
+  }
+}
+
+.footer {
+  @apply flex justify-between flex-col pr-2;
+  >p {
+    @apply text-beige text-sm tracking-widest;
+  }
+  >span {
+    @apply font-semibold text-black tracking-normal text-lg;
   }
 }

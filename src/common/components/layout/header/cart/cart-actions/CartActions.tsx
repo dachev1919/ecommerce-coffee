@@ -1,8 +1,13 @@
 import { FC } from 'react';
 import { useNumberInput, HStack, Button, Input } from '@chakra-ui/react';
 import { AddIcon, MinusIcon, DeleteIcon } from '@chakra-ui/icons';
+import { useActions } from '@/hooks/useActions';
 
-const CartActions: FC = () => {
+interface ICartAction {
+	productId: number;
+}
+
+const CartActions: FC<ICartAction> = ({ productId }) => {
 	const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
 		useNumberInput({
 			step: 1,
@@ -15,6 +20,7 @@ const CartActions: FC = () => {
 	const inc = getIncrementButtonProps();
 	const dec = getDecrementButtonProps();
 	const input = getInputProps();
+	const { removeFromCart } = useActions();
 
 	return (
 		<div className='mt-2 flex items-center'>
@@ -33,7 +39,11 @@ const CartActions: FC = () => {
 					<AddIcon fontSize={8} />
 				</Button>
 			</HStack>
-			<Button className='ml-8' size='xs'>
+			<Button
+				onClick={() => removeFromCart({ id: productId })}
+				className='ml-8'
+				size='xs'
+			>
 				<DeleteIcon color='#F23C3D' />
 			</Button>
 		</div>

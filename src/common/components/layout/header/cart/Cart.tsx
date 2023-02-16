@@ -23,7 +23,7 @@ const Cart: FC = () => {
 	return (
 		<div className={styles.cart}>
 			<button className={styles.heading} ref={btnRef} onClick={onOpen}>
-				<span className={styles.badge}>0</span>
+				<span className={styles.badge}>{items.length}</span>
 				<span className={styles.text}>My Basket</span>
 			</button>
 			<Drawer

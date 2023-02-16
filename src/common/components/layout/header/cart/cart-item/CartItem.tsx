@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { ICartItem } from '@/@types/cart-item.interface';
 import styles from '../Cart.module.scss';
 import truncate from '@/utils/string-truncate';
-import CartActions from '@/common/components/layout/header/cart/cart-item/cart-actions/CartActions';
+import CartActions from '../cart-actions/CartActions';
 
 const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
 	return (
@@ -25,7 +25,7 @@ const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
 						currency: 'USD'
 					}).format(item.product.price)}
 				</div>
-				<CartActions />
+				<CartActions productId={item.product.id} />
 			</div>
 		</div>
 	);

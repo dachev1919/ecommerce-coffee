@@ -9,7 +9,7 @@ import styles from './Menu.module.scss';
 const Menu: FC = () => {
 	return (
 		<div className={styles.menu}>
-			<Link href='/ecommerce-coffee'>
+			<Link href='/ecommerce-coffe.tsx'>
 				<Image src={image} width={80} height={80} alt='ecommerce-coffee' />
 			</Link>
 			<nav>

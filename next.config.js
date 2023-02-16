@@ -1,8 +1,15 @@
 /**
  * @type {import('next').NextConfig}
  */
-const nextConfig = {
-  /* config options here */
-};
 
-module.exports = nextConfig;
+module.exports = {
+	async redirects() {
+		return [
+			{
+				source: '/',
+				destination: '/ecommerce-coffee',
+				permanent: true
+			}
+		];
+	}
+};

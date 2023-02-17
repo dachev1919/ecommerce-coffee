@@ -5,13 +5,14 @@ import { useActions } from '@/hooks/useActions';
 
 interface ICartAction {
 	productId: number;
+	productQuantity: number;
 }
 
-const CartActions: FC<ICartAction> = ({ productId }) => {
+const CartActions: FC<ICartAction> = ({ productId, productQuantity }) => {
 	const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
 		useNumberInput({
 			step: 1,
-			defaultValue: 1,
+			defaultValue: productQuantity,
 			min: 1,
 			max: 99,
 			precision: 0
@@ -20,12 +21,19 @@ const CartActions: FC<ICartAction> = ({ productId }) => {
 	const inc = getIncrementButtonProps();
 	const dec = getDecrementButtonProps();
 	const input = getInputProps();
-	const { removeFromCart } = useActions();
+	const { removeFromCart, changeQuantity } = useActions();
 
 	return (
 		<div className='mt-2 flex items-center'>
 			<HStack maxW='90px'>
-				<Button size='xs' {...dec}>
+				<Button
+					onClick={() =>
+						productQuantity > 1 &&
+						changeQuantity({ id: productId, type: 'minus' })
+					}
+					size='xs'
+					{...dec}
+				>
 					<MinusIcon fontSize={8} />
 				</Button>
 				<Input
@@ -35,7 +43,11 @@ const CartActions: FC<ICartAction> = ({ productId }) => {
 					readOnly
 					_hover={{ cursor: 'default' }}
 				/>
-				<Button size='xs' {...inc}>
+				<Button
+					onClick={() => changeQuantity({ id: productId, type: 'plus' })}
+					size='xs'
+					{...inc}
+				>
 					<AddIcon fontSize={8} />
 				</Button>
 			</HStack>

@@ -4,6 +4,7 @@ import { ICartItem } from '@/@types/cart-item.interface';
 import styles from '../Cart.module.scss';
 import truncate from '@/utils/string-truncate';
 import CartActions from '../cart-actions/CartActions';
+import { formatToCurrency } from '@/utils/format-to-currency';
 
 const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
 	return (
@@ -20,12 +21,12 @@ const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
 					15
 				)}`}</div>
 				<div className={styles.price}>
-					{new Intl.NumberFormat('en-EN', {
-						style: 'currency',
-						currency: 'USD'
-					}).format(item.product.price)}
+					{formatToCurrency(item.product.price)}
 				</div>
-				<CartActions productId={item.product.id} />
+				<CartActions
+					productId={item.product.id}
+					productQuantity={item.quantity}
+				/>
 			</div>
 		</div>
 	);

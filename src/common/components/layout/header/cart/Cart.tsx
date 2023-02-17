@@ -12,13 +12,13 @@ import {
 	Button,
 	useDisclosure
 } from '@chakra-ui/react';
-import { useSelector } from 'react-redux';
-import { TypeRootState } from '@/store/store';
+import { formatToCurrency } from '@/utils/format-to-currency';
+import { useCart } from '@/utils/use-cart';
 
 const Cart: FC = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const btnRef = React.useRef<HTMLButtonElement>(null);
-	const items = useSelector((state: TypeRootState) => state.cart.items);
+	const { items, totalPrice } = useCart();
 
 	return (
 		<div className={styles.cart}>
@@ -40,9 +40,11 @@ const Cart: FC = () => {
 					</DrawerHeader>
 
 					<DrawerBody>
-						{items.map(item => (
-							<CartItem key={item.id} item={item} />
-						))}
+						{items.length ? (
+							items.map(item => <CartItem key={item.id} item={item} />)
+						) : (
+							<p className={styles.info}>Basket is empty!</p>
+						)}
 					</DrawerBody>
 
 					<DrawerFooter
@@ -51,7 +53,7 @@ const Cart: FC = () => {
 					>
 						<div className={styles.footer}>
 							<p>Total:</p>
-							<span>$100</span>
+							<span>{formatToCurrency(totalPrice)}</span>
 						</div>
 						<Button colorScheme='green'>Checkout</Button>
 					</DrawerFooter>

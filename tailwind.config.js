@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors');
 
 const constants = {
 	red: '#F23C3D',
-	green: '#00A389',
+	green: '#007C59',
 	'dark-green': '#006044',
 	'light-green': '#E6F2EF',
 	black: '#222222',

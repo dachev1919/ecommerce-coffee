@@ -1,0 +1,33 @@
+.carousel {
+  @apply grid gap-4 pt-28;
+  perspective: 1500px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.item {
+  @apply rounded-xl bg-light-gray relative p-5 pt-0 mb-28;
+
+  &.active {
+    @apply bg-green shadow-2xl shadow-green relative z-10;
+    transition-duration: 300ms;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-out;
+    transform: rotate3d(0);
+    &:hover {
+      transition-duration: 150ms;
+    }
+
+    .heading {
+      @apply text-white text-3x1 leading-snug;
+    }
+  }
+  .image {
+    @apply max-w-full -mt-28;
+  }
+  .heading {
+    @apply text-xl capitalize text-beige mt-3 font-bold leading-8;
+  }
+  .description {
+    @apply mt-5 text-beige text-sm opacity-90;
+  }
+}

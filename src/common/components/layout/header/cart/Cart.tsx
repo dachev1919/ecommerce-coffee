@@ -13,12 +13,12 @@ import {
 	useDisclosure
 } from '@chakra-ui/react';
 import { formatToCurrency } from '@/utils/format-to-currency';
-import { useCart } from '@/utils/use-cart';
+import { useStoreHooks } from '@/utils/use-store-hooks';
 
 const Cart: FC = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const btnRef = React.useRef<HTMLButtonElement>(null);
-	const { items, totalPrice } = useCart();
+	const { items, totalPrice } = useStoreHooks();
 
 	return (
 		<div className={styles.cart}>

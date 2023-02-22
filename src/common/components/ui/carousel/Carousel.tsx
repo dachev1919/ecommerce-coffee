@@ -6,8 +6,8 @@ import { products } from '@/common/mock-data/produtcs.data';
 const Carousel: FC = () => {
 	return (
 		<div className={styles.carousel}>
-			{products.slice(0, 4).map(item => (
-				<CarouselItem key={item.id} item={item} />
+			{products.slice(0, 4).map((item, index) => (
+				<CarouselItem itemIndex={index} key={item.id} product={item} />
 			))}
 		</div>
 	);

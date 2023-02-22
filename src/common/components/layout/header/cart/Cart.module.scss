@@ -20,7 +20,13 @@
     @apply tracking-widest font-bold break-all font-semibold;
   }
   .price {
-    @apply text-sm text-beige mt-1;
+    @apply text-xs text-beige mt-1;
+    div {
+      @apply capitalize;
+      span {
+        @apply lowercase;
+      }
+    }
   }
 }
 

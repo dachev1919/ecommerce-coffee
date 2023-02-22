@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { TypeRootState } from '@/store/store';
 
-export const useCart = () => {
+export const useStoreHooks = () => {
 	const cartItems = useSelector((state: TypeRootState) => state.cart.items);
 
 	const totalPrice = cartItems.reduce(
@@ -10,4 +10,12 @@ export const useCart = () => {
 	);
 
 	return { items: cartItems, totalPrice };
+};
+
+export const useCarouselHooks = () => {
+	const activeIndex = useSelector(
+		(state: TypeRootState) => state.carousel.activeItemIndex
+	);
+
+	return { activeIndex };
 };

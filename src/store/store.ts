@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { cartSlice } from '@/store/slice';
+import { cartSlice } from '@/store/cart/cart.slice';
 import {
 	persistStore,
 	persistReducer,
@@ -11,15 +11,17 @@ import {
 	REGISTER
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { carouselSlice } from '@/store/carousel/carousel.slice';
 
 const persistConfig = {
 	key: 'ecommerce-coffee',
 	storage,
-	whitelist: ['cart'] // which of the reducers will be added
+	whitelist: ['cart', 'carousel'] // which of the reducers will be added
 };
 
 const rootReducer = combineReducers({
-	cart: cartSlice.reducer
+	cart: cartSlice.reducer,
+	carousel: carouselSlice.reducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

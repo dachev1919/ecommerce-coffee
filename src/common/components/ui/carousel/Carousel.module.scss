@@ -1,33 +1,81 @@
+@import '@/common/styles/variables.scss';
+
 .carousel {
-  @apply grid gap-4 pt-28;
-  perspective: 1500px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  @apply flex gap-4 pt-28 flex-wrap mt-10;
+  perspective: 2500px;
 }
 
 .item {
-  @apply rounded-xl bg-light-gray relative p-5 pt-0 mb-28;
+  @apply rounded-3xl bg-light-gray relative p-5 pt-0 mb-36 mt-8 relative transform-none;
+  flex: 0 0 calc(24%  - 1rem);
+  transition: none;
 
-  &.active {
-    @apply bg-green shadow-2xl shadow-green relative z-10;
-    transition-duration: 300ms;
-    transition-property: transform, box-shadow;
-    transition-timing-function: ease-out;
-    transform: rotate3d(0);
-    &:hover {
-      transition-duration: 150ms;
-    }
-
-    .heading {
-      @apply text-white text-3x1 leading-snug;
+  >div {
+    @apply relative;
+  }
+  .info-wrapper {
+    @apply flex gap-4 items-center mt-4 overflow-hidden;
+    > * {
+      flex: 0 0 100%;
     }
   }
   .image {
-    @apply max-w-full -mt-28;
+    @apply max-w-full -mt-28 mx-auto;
   }
   .heading {
     @apply text-xl capitalize text-beige mt-3 font-bold leading-8;
   }
   .description {
-    @apply mt-5 text-beige text-sm opacity-90;
+    @apply text-beige text-sm opacity-90;
+  }
+  &:not(.active) {
+    @apply cursor-pointer;
+  }
+  &:hover {
+    transition-duration: 350ms;
+  }
+  &.active {
+    @apply bg-green shadow-2xl shadow-green relative z-10;
+    flex: 0 0 calc(28%  - 1rem);
+    top: -2.75rem;
+    margin-bottom: 3.5rem;
+    background-image: url('../../../assets/images/cover.png');
+    background-size: cover;
+    background-position: center -12rem;
+    background-repeat: no-repeat;
+    transition-property: transform, box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+
+    &::before {
+      @apply w-full h-full absolute top-0 left-0 rounded-3xl;
+      content: '';
+      background-image: linear-gradient(0deg, rgba(0, 124, 89, 1) 40%, rgba(0, 124, 89, .5) 100%);
+    }
+
+    .heading {
+      @apply text-white text-3x1 leading-snug;
+    }
+    .image {
+      width: 110%;
+      margin-top: calc(-7rem - 10%);
+    }
+    .info-wrapper {
+      @apply flex-col;
+    }
+    .description {
+      @apply text-light-green;
+    }
+  }
+}
+
+.variations {
+  @apply grid grid-cols-4 gap-2 h-max;
+
+  button {
+    @apply border border-solid border-white transition-colors py-0.5 px-2 text-center font-semibold text-sm bg-transparent text-white rounded text-[.8rem];
+    &.active {
+      @apply text-dark-green bg-white;
+    }
   }
 }

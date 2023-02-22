@@ -21,11 +21,16 @@ const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
 					15
 				)}`}</div>
 				<div className={styles.price}>
+					<div>
+						<span>size: </span>
+						{item.size.toLowerCase()}
+					</div>
 					{formatToCurrency(item.product.price)}
 				</div>
 				<CartActions
 					productId={item.product.id}
 					productQuantity={item.quantity}
+					productSize={item.size}
 				/>
 			</div>
 		</div>

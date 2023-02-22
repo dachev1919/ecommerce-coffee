@@ -1,9 +1,9 @@
 import React, { Dispatch, FC, SetStateAction } from 'react';
 import styles from '@/modules/home/components/carousel/Carousel.module.scss';
-import { TypeSize } from '@/store/cart/cart.types';
+import { TypeSize } from '@/common/components/layout/header/cart/api/store-slice/cart.types';
 import cn from 'clsx';
 
-const SIZES: TypeSize[] = ['SHORT', 'TALL', 'GRANDE', 'VENTI'];
+const SIZES: TypeSize[] = ['TALL', 'GRANDE', 'VENTI'];
 
 interface ICarouselVariationsProps {
 	selectedSize: TypeSize;

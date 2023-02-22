@@ -6,7 +6,7 @@ import { IProduct } from '@/@types/product.intarface';
 import { rotateToMouse, removeListener } from '../utils/hover-effect';
 import CarouselButton from '@/modules/home/components/carousel/carousel-item/carousel-button/CarouselButton';
 import CarouselVariations from '@/modules/home/components/carousel/carousel-item/carousel-variations/CarouselVariations';
-import { TypeSize } from '@/store/cart/cart.types';
+import { TypeSize } from '@/common/components/layout/header/cart/api/store-slice/cart.types';
 import Link from 'next/link';
 import { useCarouselHooks } from '@/utils/use-store-hooks';
 import { useActions } from '@/hooks/useActions';
@@ -18,7 +18,7 @@ interface ICarouselItemProps {
 
 const CarouselItem: FC<ICarouselItemProps> = ({ product, itemIndex }) => {
 	const { setCarouselActiveIndex } = useActions();
-	const [selectedSize, setSelectedSize] = useState<TypeSize>('SHORT');
+	const [selectedSize, setSelectedSize] = useState<TypeSize>('GRANDE');
 	const { activeIndex: selectedItemIndex } = useCarouselHooks();
 	const isActive = itemIndex === selectedItemIndex;
 	const inputRef = useRef<HTMLDivElement>(null);
@@ -35,14 +35,14 @@ const CarouselItem: FC<ICarouselItemProps> = ({ product, itemIndex }) => {
 			})}
 		>
 			<div>
-				<Image
-					className={styles.image}
-					alt={product.name}
-					src={product.images[0]}
-					width={330}
-					height={330}
-				/>
 				<Link href='/ecommerce-coffee'>
+					<Image
+						className={styles.image}
+						alt={product.name}
+						src={product.images[0]}
+						width={330}
+						height={330}
+					/>
 					<h2 className={styles.heading}>{product.name}</h2>
 				</Link>
 

@@ -3,7 +3,7 @@ import { COLORS } from '@/config/color.config';
 import { Button } from '@chakra-ui/react';
 import { useActions } from '@/hooks/useActions';
 import { IProduct } from '@/@types/product.intarface';
-import { TypeSize } from '@/store/cart/cart.types';
+import { TypeSize } from '@/common/components/layout/header/cart/api/store-slice/cart.types';
 import { useSelector } from 'react-redux';
 import { TypeRootState } from '@/store/store';
 import { toast } from 'react-toastify';
@@ -39,7 +39,7 @@ const CarouselButton: FC<ICarouselButtonProps> = ({
 		<Button
 			onClick={buttonClickHandler}
 			color={COLORS.green}
-			className='tracking-widest uppercase mx-auto block'
+			className='tracking-widest uppercase mx-auto block w-10/12'
 			marginTop={5}
 			fontSize={12}
 			borderRadius={20}

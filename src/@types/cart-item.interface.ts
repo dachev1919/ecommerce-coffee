@@ -1,5 +1,5 @@
 import { IProduct } from './product.intarface';
-import { TypeSize } from '@/store/cart/cart.types';
+import { TypeSize } from '@/common/components/layout/header/cart/api/store-slice/cart.types';
 
 export interface ICartItem {
 	id: number;

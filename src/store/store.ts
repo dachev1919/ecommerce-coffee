@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { cartSlice } from '@/store/cart/cart.slice';
+import { cartSlice } from '@/common/components/layout/header/cart/api/store-slice/cart.slice';
 import {
 	persistStore,
 	persistReducer,
@@ -11,7 +11,7 @@ import {
 	REGISTER
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { carouselSlice } from '@/store/carousel/carousel.slice';
+import { carouselSlice } from '@/modules/home/components/carousel/api/store-slice/carousel.slice';
 
 const persistConfig = {
 	key: 'ecommerce-coffee',

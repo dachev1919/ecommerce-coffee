@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useNumberInput, HStack, Button, Input } from '@chakra-ui/react';
 import { AddIcon, MinusIcon, DeleteIcon } from '@chakra-ui/icons';
 import { useActions } from '@/hooks/useActions';
-import { TypeSize } from '@/store/cart/cart.types';
+import { TypeSize } from '@/common/components/layout/header/cart/api/store-slice/cart.types';
 
 interface ICartAction {
 	productId: number;

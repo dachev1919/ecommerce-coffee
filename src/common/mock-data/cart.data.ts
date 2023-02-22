@@ -6,7 +6,7 @@ export const cart: ICartItem[] = [
 		id: Math.floor(Math.random() * 100000000),
 		quantity: 1,
 		product: products[0],
-		size: 'SHORT'
+		size: 'VENTI'
 	},
 	{
 		id: Math.floor(Math.random() * 100000000),

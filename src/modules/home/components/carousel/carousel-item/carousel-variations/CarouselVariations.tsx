@@ -1,5 +1,5 @@
 import React, { Dispatch, FC, SetStateAction } from 'react';
-import styles from '../../Carousel.module.scss';
+import styles from '@/modules/home/components/carousel/Carousel.module.scss';
 import { TypeSize } from '@/store/cart/cart.types';
 import cn from 'clsx';
 

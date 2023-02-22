@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import styles from './Carousel.module.scss';
-import CarouselItem from '@/common/components/ui/carousel/carousel-item/CarouselItem';
+import styles from '@/modules/home/components/carousel/Carousel.module.scss';
+import CarouselItem from '@/modules/home/components/carousel/carousel-item/CarouselItem';
 import { products } from '@/common/mock-data/produtcs.data';
 
 const Carousel: FC = () => {

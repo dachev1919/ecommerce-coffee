@@ -1,3 +1,4 @@
 .header {
-	@apply flex w-full items-center justify-between mb-4;
+	@apply flex w-full items-center justify-between mb-4 m-auto;
+	max-width: 1536px;
 }

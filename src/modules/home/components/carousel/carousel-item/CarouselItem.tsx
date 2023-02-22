@@ -1,11 +1,11 @@
 import React, { FC, useRef, useState } from 'react';
 import cn from 'clsx';
-import styles from '../Carousel.module.scss';
+import styles from '@/modules/home/components/carousel/Carousel.module.scss';
 import Image from 'next/image';
 import { IProduct } from '@/@types/product.intarface';
 import { rotateToMouse, removeListener } from '../utils/hover-effect';
-import CarouselButton from '@/common/components/ui/carousel/carousel-item/carousel-button/CarouselButton';
-import CarouselVariations from '@/common/components/ui/carousel/carousel-item/carousel-variations/CarouselVariations';
+import CarouselButton from '@/modules/home/components/carousel/carousel-item/carousel-button/CarouselButton';
+import CarouselVariations from '@/modules/home/components/carousel/carousel-item/carousel-variations/CarouselVariations';
 import { TypeSize } from '@/store/cart/cart.types';
 import Link from 'next/link';
 import { useCarouselHooks } from '@/utils/use-store-hooks';

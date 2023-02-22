@@ -30,6 +30,9 @@
   }
   &:not(.active) {
     @apply cursor-pointer;
+    a {
+      @apply pointer-events-none;
+    }
   }
   &:hover {
     transition-duration: 350ms;
@@ -39,7 +42,7 @@
     flex: 0 0 calc(28%  - 1rem);
     top: -2.75rem;
     margin-bottom: 3.5rem;
-    background-image: url('../../../assets/images/cover.png');
+    background-image: url('../../../../common/assets/images/cover.png');
     background-size: cover;
     background-position: center -12rem;
     background-repeat: no-repeat;

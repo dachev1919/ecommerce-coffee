@@ -1,0 +1,10 @@
+.variations {
+  @apply grid grid-cols-3 gap-2 h-max mt-4;
+
+  button {
+    @apply border border-solid border-white transition-colors py-0.5 px-2 text-center font-semibold text-sm bg-transparent text-white rounded text-[.8rem];
+    &.active {
+      @apply text-dark-green bg-white;
+    }
+  }
+}

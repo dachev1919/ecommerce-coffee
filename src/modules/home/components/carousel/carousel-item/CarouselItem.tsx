@@ -4,12 +4,12 @@ import styles from '@/modules/home/components/carousel/Carousel.module.scss';
 import Image from 'next/image';
 import { IProduct } from '@/@types/product.intarface';
 import { rotateToMouse, removeListener } from '../utils/hover-effect';
-import CarouselButton from '@/modules/home/components/carousel/carousel-item/carousel-button/CarouselButton';
-import CarouselVariations from '@/modules/home/components/carousel/carousel-item/carousel-variations/CarouselVariations';
 import { TypeSize } from '@/common/components/layout/header/cart/api/store-slice/cart.types';
 import Link from 'next/link';
 import { useCarouselHooks } from '@/utils/use-store-hooks';
 import { useActions } from '@/hooks/useActions';
+import ProductAddButton from '@/common/components/ui/product-add-button/ProductAddButton';
+import ProductVariations from '@/common/components/ui/product-variations/ProductVariations';
 
 interface ICarouselItemProps {
 	product: IProduct;
@@ -48,14 +48,14 @@ const CarouselItem: FC<ICarouselItemProps> = ({ product, itemIndex }) => {
 
 				<div className={styles['info-wrapper']}>
 					<p className={styles.description}>{product.description}</p>
-					<CarouselVariations
+					<ProductVariations
 						selectedSize={selectedSize}
 						setSelectedSize={setSelectedSize}
 					/>
 				</div>
 
 				{isActive && (
-					<CarouselButton selectedSize={selectedSize} product={product} />
+					<ProductAddButton selectedSize={selectedSize} product={product} />
 				)}
 			</div>
 		</div>

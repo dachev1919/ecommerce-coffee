@@ -6,13 +6,15 @@ const constants = {
 	green: '#007C59',
 	'dark-green': '#006044',
 	'light-green': '#E6F2EF',
+	'black-green': '#004934',
 	black: '#222222',
 	white: '#ffffff',
 	'light-gray': '#E8E7E3',
 	'gray-100': '#afafaf',
 	'gray-200': '#929292',
 	'gray-300': '#757575',
-	beige: '#A49B8F'
+	beige: '#A49B8F',
+	'dark-beige': '#7e736c'
 };
 
 module.exports = {

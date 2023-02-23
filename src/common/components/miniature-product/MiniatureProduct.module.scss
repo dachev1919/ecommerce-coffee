@@ -1,0 +1,22 @@
+.miniature {
+  @apply rounded-3xl bg-light-gray relative p-5 pt-0 mb-36 mt-8 relative transform-none text-center;
+
+  >div {
+    @apply relative;
+  }
+  .info-wrapper {
+    @apply flex gap-4 items-center mt-4 overflow-hidden;
+  }
+  .image {
+    @apply max-w-full -mt-28 mx-auto;
+  }
+  .heading {
+    @apply text-xl capitalize text-beige mt-3 font-bold leading-8 transition;
+    &:hover {
+      @apply text-dark-beige;
+    }
+  }
+  &:hover {
+    transition-duration: 350ms;
+  }
+}

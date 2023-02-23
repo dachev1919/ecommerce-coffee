@@ -1,10 +1,9 @@
-import { FC } from 'react';
-import Layout from '@/common/components/layout/Layout';
-import Carousel from '@/modules/home/components/carousel/Carousel';
+import React, { FC } from 'react';
 import Hero from '@/modules/home/components/hero/Hero';
-import RelatedProducts from '@/common/components/related-product/RelatedProducts';
+import Carousel from '@/modules/home/components/carousel/Carousel';
+import Layout from '@/common/components/layout/Layout';
 
-const Home: FC = () => {
+const ProductDetails: FC = () => {
 	return (
 		<Layout
 			title='Home'
@@ -12,9 +11,8 @@ const Home: FC = () => {
 		>
 			<Hero classNames=''>The happiest hour of the year</Hero>
 			<Carousel />
-			<RelatedProducts />
 		</Layout>
 	);
 };
 
-export default Home;
+export default ProductDetails;

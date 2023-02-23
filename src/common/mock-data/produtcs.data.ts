@@ -18,7 +18,7 @@ export const products: IProduct[] = [
 	},
 	{
 		id: 2,
-		name: 'Peppermint mocha starbucks',
+		name: 'Peppermint mocha starbucks coffee',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
 		price: 8,
@@ -45,7 +45,7 @@ export const products: IProduct[] = [
 	},
 	{
 		id: 5,
-		name: 'Caramel Brulée Crème',
+		name: 'Caramel Brulée Crème frappuccino',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
 		price: 11,
@@ -54,7 +54,7 @@ export const products: IProduct[] = [
 	},
 	{
 		id: 6,
-		name: 'Fruit Starbucks Refreshers',
+		name: 'Fruit Starbucks Refreshers frappuccino',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
 		price: 13,

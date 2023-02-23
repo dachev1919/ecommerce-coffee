@@ -11,10 +11,13 @@
     @apply max-w-full -mt-28 mx-auto;
   }
   .heading {
-    @apply text-xl capitalize text-beige mt-3 font-bold leading-8 transition;
+    @apply text-xl capitalize text-beige mt-1 font-bold leading-8 transition;
     &:hover {
       @apply text-dark-beige;
     }
+  }
+  .price {
+    @apply text-green text-lg text-beige;
   }
   &:hover {
     transition-duration: 350ms;

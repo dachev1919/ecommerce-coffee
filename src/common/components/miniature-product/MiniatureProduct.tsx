@@ -6,6 +6,7 @@ import Link from 'next/link';
 import ProductAddButton from '@/common/components/ui/product-add-button/ProductAddButton';
 import ProductVariations from '@/common/components/ui/product-variations/ProductVariations';
 import styles from './MiniatureProduct.module.scss';
+import { formatToCurrency } from '@/utils/format-to-currency';
 
 interface ICarouselItemProps {
 	product: IProduct;
@@ -24,6 +25,9 @@ const CarouselItem: FC<ICarouselItemProps> = ({ product }) => {
 					width={330}
 					height={330}
 				/>
+			</Link>
+			<p className={styles.price}>{formatToCurrency(product.price)}</p>
+			<Link href='/ecommerce-coffee'>
 				<h2 className={styles.heading}>{product.name}</h2>
 			</Link>
 

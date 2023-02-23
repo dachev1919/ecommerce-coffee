@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { Dispatch, FC, SetStateAction } from 'react';
 import {
 	Button,
 	ChakraProvider,
@@ -50,7 +50,12 @@ const relatedProductsColors = extendTheme({
 	}
 });
 
-const Filtering: FC = () => {
+interface IFiltering {
+	sortType: EnumSorting;
+	setSortType: Dispatch<SetStateAction<EnumSorting>>;
+}
+
+const Sorting: FC<IFiltering> = ({ sortType, setSortType }) => {
 	return (
 		<Menu>
 			<ChakraProvider theme={relatedProductsColors}>
@@ -60,11 +65,13 @@ const Filtering: FC = () => {
 					colorScheme='brand'
 					rightIcon={<ChevronDownIcon />}
 				>
-					Actions
+					{sortingData.find(sort => sort.value === sortType)?.label}
 				</MenuButton>
 				<MenuList>
 					{sortingData.map(sort => (
-						<MenuItem key={sort.value}>{sort.label}</MenuItem>
+						<MenuItem key={sort.value} onClick={() => setSortType(sort.value)}>
+							{sort.label}
+						</MenuItem>
 					))}
 				</MenuList>
 			</ChakraProvider>
@@ -72,4 +79,4 @@ const Filtering: FC = () => {
 	);
 };
 
-export default Filtering;
+export default Sorting;

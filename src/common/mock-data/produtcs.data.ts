@@ -14,7 +14,8 @@ export const products: IProduct[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
 		price: 9,
 		reviews: [],
-		images: [prod1, prod2, prod3]
+		images: [prod1, prod2, prod3],
+		date: '2022-12-20'
 	},
 	{
 		id: 2,
@@ -23,7 +24,8 @@ export const products: IProduct[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
 		price: 8,
 		reviews: [],
-		images: [prod2, prod3, prod4]
+		images: [prod2, prod3, prod4],
+		date: '2022-12-21'
 	},
 	{
 		id: 3,
@@ -32,7 +34,8 @@ export const products: IProduct[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
 		price: 7,
 		reviews: [],
-		images: [prod3, prod4, prod5]
+		images: [prod3, prod4, prod5],
+		date: '2022-12-22'
 	},
 	{
 		id: 4,
@@ -41,7 +44,8 @@ export const products: IProduct[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
 		price: 12,
 		reviews: [],
-		images: [prod4, prod5, prod6]
+		images: [prod4, prod5, prod6],
+		date: '2022-12-23'
 	},
 	{
 		id: 5,
@@ -50,7 +54,8 @@ export const products: IProduct[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
 		price: 11,
 		reviews: [],
-		images: [prod5, prod6, prod1]
+		images: [prod5, prod6, prod1],
+		date: '2022-12-24'
 	},
 	{
 		id: 6,
@@ -59,6 +64,7 @@ export const products: IProduct[] = [
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
 		price: 13,
 		reviews: [],
-		images: [prod6, prod1, prod2]
+		images: [prod6, prod1, prod2],
+		date: '2022-12-25'
 	}
 ];

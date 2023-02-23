@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { formatToCurrency } from '@/utils/format-to-currency';
 import { useStoreHooks } from '@/utils/use-store-hooks';
+import { COLORS } from '@/config/color.config';
 
 const Cart: FC = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -55,7 +56,14 @@ const Cart: FC = () => {
 							<p>Total:</p>
 							<span>{formatToCurrency(totalPrice)}</span>
 						</div>
-						<Button colorScheme='green'>Checkout</Button>
+						<Button
+							bg={COLORS.green}
+							_hover={{ backgroundColor: COLORS['dark-green'] }}
+							_active={{ backgroundColor: COLORS['black-green'] }}
+							colorScheme='green'
+						>
+							Checkout
+						</Button>
 					</DrawerFooter>
 				</DrawerContent>
 			</Drawer>

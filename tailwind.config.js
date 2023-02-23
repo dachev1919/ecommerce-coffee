@@ -14,7 +14,11 @@ const constants = {
 	'gray-200': '#929292',
 	'gray-300': '#757575',
 	beige: '#A49B8F',
-	'dark-beige': '#7e736c'
+	'dark-beige': '#7e736c',
+	'trending-1': '#b3ba72',
+	'trending-2': '#dbb98f',
+	'trending-3': '#e1c888',
+	star: '#fdad14'
 };
 
 module.exports = {

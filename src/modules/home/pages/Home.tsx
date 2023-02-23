@@ -3,6 +3,7 @@ import Layout from '@/common/components/layout/Layout';
 import Carousel from '@/modules/home/components/carousel/Carousel';
 import Hero from '@/modules/home/components/hero/Hero';
 import RelatedProducts from '@/common/components/related-product/RelatedProducts';
+import TrendingProducts from '@/modules/home/components/trending-products/TrendingProducts';
 
 const Home: FC = () => {
 	return (
@@ -12,7 +13,8 @@ const Home: FC = () => {
 		>
 			<Hero classNames=''>The happiest hour of the year</Hero>
 			<Carousel />
-			<RelatedProducts />
+			<TrendingProducts />
+			<RelatedProducts limit={8} />
 		</Layout>
 	);
 };

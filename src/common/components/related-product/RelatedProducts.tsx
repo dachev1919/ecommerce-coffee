@@ -6,7 +6,11 @@ import styles from './RelatedProducts.module.scss';
 import { IProduct } from '@/@types/product.intarface';
 import { productSorting } from '@/common/components/related-product/utils/product-sorting';
 
-const RelatedProducts: FC = () => {
+interface IRelatedProductsProps {
+	limit?: number;
+}
+
+const RelatedProducts: FC<IRelatedProductsProps> = ({ limit = 4 }) => {
 	const [sortType, setSortType] = useState<EnumSorting>(EnumSorting.NEWEST);
 	const [productList, setProductList] = useState<IProduct[]>(products);
 
@@ -21,7 +25,7 @@ const RelatedProducts: FC = () => {
 				<Sorting sortType={sortType} setSortType={setSortType} />
 			</div>
 			<div className={styles.products}>
-				{productList.slice(0, 4).map(product => (
+				{productList.slice(0, limit).map(product => (
 					<MiniatureProduct key={product.id} product={product} />
 				))}
 			</div>

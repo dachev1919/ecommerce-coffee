@@ -8,14 +8,16 @@ const SIZES: TypeSize[] = ['TALL', 'GRANDE', 'VENTI'];
 interface ICarouselVariationsProps {
 	selectedSize: TypeSize;
 	setSelectedSize: Dispatch<SetStateAction<TypeSize>>;
+	darkStyle?: boolean;
 }
 
 const ProductVariations: FC<ICarouselVariationsProps> = ({
 	selectedSize,
-	setSelectedSize
+	setSelectedSize,
+	darkStyle = false
 }) => {
 	return (
-		<div className={styles.variations}>
+		<div className={`${styles.variations} ${darkStyle ? styles.dark : ''}`}>
 			{SIZES.map(size => (
 				<button
 					key={size}

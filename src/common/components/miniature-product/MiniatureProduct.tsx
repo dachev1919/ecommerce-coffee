@@ -17,7 +17,7 @@ const CarouselItem: FC<ICarouselItemProps> = ({ product }) => {
 
 	return (
 		<div className={styles.miniature}>
-			<Link href='/ecommerce-coffee'>
+			<Link href={`/ecommerce-coffee/product/${product.slug}`}>
 				<Image
 					className={styles.image}
 					alt={product.name}
@@ -27,11 +27,12 @@ const CarouselItem: FC<ICarouselItemProps> = ({ product }) => {
 				/>
 			</Link>
 			<p className={styles.price}>{formatToCurrency(product.price)}</p>
-			<Link href='/ecommerce-coffee'>
+			<Link href={`/ecommerce-coffee/product/${product.slug}`}>
 				<h2 className={styles.heading}>{product.name}</h2>
 			</Link>
 
 			<ProductVariations
+				darkStyle={true}
 				selectedSize={selectedSize}
 				setSelectedSize={setSelectedSize}
 			/>

@@ -1,28 +1,25 @@
 import React, { FC } from 'react';
 import { COLORS } from '@/config/color.config';
-import { Button } from '@chakra-ui/react';
+import { Button, theme } from '@chakra-ui/react';
 import { useActions } from '@/hooks/useActions';
 import { IProduct } from '@/@types/product.intarface';
 import { TypeSize } from '@/common/components/layout/header/cart/api/store-slice/cart.types';
 import { useSelector } from 'react-redux';
 import { TypeRootState } from '@/store/store';
 import { toast } from 'react-toastify';
-import { extendTheme } from '@chakra-ui/react';
-const buttonColors = extendTheme({
-	hoverColor: '#006044',
-	activeColor: '#004934'
-});
 
 interface ICarouselButtonProps {
 	product: IProduct;
 	selectedSize: TypeSize;
 	green?: boolean;
+	quantity?: number;
 }
 
 const ProductAddButton: FC<ICarouselButtonProps> = ({
 	product,
 	selectedSize,
-	green
+	green,
+	quantity = 1
 }) => {
 	const { addToCart, removeFromCart } = useActions();
 	const { items: cartItems } = useSelector(
@@ -38,7 +35,7 @@ const ProductAddButton: FC<ICarouselButtonProps> = ({
 			removeFromCart({ id: product.id, size: selectedSize });
 			toast.success('Product removed');
 		} else {
-			addToCart({ product, quantity: 1, size: selectedSize });
+			addToCart({ product, quantity, size: selectedSize });
 		}
 	};
 
@@ -50,13 +47,13 @@ const ProductAddButton: FC<ICarouselButtonProps> = ({
 			marginTop={5}
 			_hover={
 				green
-					? { backgroundColor: buttonColors.hoverColor }
-					: { backgroundColor: buttonColors.colors.gray['100'] }
+					? { backgroundColor: COLORS['dark-green'] }
+					: { backgroundColor: theme.colors.gray['100'] }
 			}
 			_active={
 				green
-					? { backgroundColor: buttonColors.activeColor }
-					: { backgroundColor: buttonColors.colors.gray['200'] }
+					? { backgroundColor: COLORS['black-green'] }
+					: { backgroundColor: theme.colors.gray['200'] }
 			}
 			bg={green ? COLORS.green : COLORS.white}
 			fontSize={12}

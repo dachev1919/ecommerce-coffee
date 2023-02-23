@@ -1,0 +1,129 @@
+.trending-products {
+  @apply flex gap-4 pt-12 pb-32;
+  @media screen and (max-width: 990px){
+    @apply flex-col-reverse gap-8;
+  }
+  .info {
+    @apply flex justify-center flex-col;
+    @media screen and (max-width: 990px) {
+      @apply text-center;
+    }
+    flex: 1 1 calc(40% - 2rem);
+    .rating {
+      @apply flex gap-4 mt-6;
+      @media screen and (max-width: 990px) {
+        @apply justify-center;
+      }
+      > div {
+        display: flex!important;
+        @apply items-center
+      }
+    }
+    .title {
+      @apply text-6xl font-bold text-black;
+      @media screen and (max-width: 767px) {
+        @apply text-5xl;
+      }
+      @media screen and (max-width: 575px) {
+        @apply text-4xl;
+      }
+    }
+    .price {
+      @apply text-3xl flex gap-4 items-center tracking-widest font-semibold text-green;
+    }
+    .description {
+      @apply mt-4;
+    }
+  }
+  .actions {
+    @media screen and (max-width: 990px) {
+      @apply flex flex-col items-center;
+    }
+    .add {
+      @apply flex w-9/12 items-center mt-8 gap-4;
+      @media screen and (min-width: 991px) and (max-width: 1199px) {
+        @apply w-11/12;
+      }
+      @media screen and (max-width: 575px) {
+        @apply w-full;
+      }
+      button {
+        @apply mt-0;
+      }
+    }
+    > div:not(.add) {
+      @apply w-9/12 mt-8;
+      @media screen and (max-width: 575px) {
+        @apply w-full;
+      }
+    }
+  }
+  .image {
+    @apply relative flex justify-center items-center;
+    flex: 1 1 calc(50% - 2rem);
+    &::before {
+      content: '';
+      @apply absolute z-0 bg-green rounded-full left-1/2 -translate-x-2/4 bottom-0 overflow-hidden;
+      width: 600px;
+      max-width: 100%;
+      height: 600px;
+      max-height: 100%;
+      background-image: url("../../../../common/assets/images/coffee-texture.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+
+    }
+    img {
+      @apply z-10 relative;
+    }
+  }
+  .miniatures {
+    @apply flex flex-col justify-between items-center gap-4;
+    flex: 1 1 calc(10% - 2rem);
+    @media screen and (max-width: 1199px) {
+      flex: 1 1 calc(10% - 2rem);
+    }
+    @media screen and (max-width: 990px){
+      @apply flex-row;
+    }
+    .miniature {
+      @apply relative;
+      @media screen and (min-width: 1200px){
+        width: 155px;
+        max-width: 100%;
+        height: 155px;
+        max-height: 100%;
+      }
+      @media screen and (min-width: 991px) and (max-width: 1199px) {
+          width: 100px;
+          height: 100px;
+      }
+      &::before {
+        content: '';
+        width: 130px;
+        max-width: 100%;
+        height: 130px;
+        max-height: 100%;
+        @apply absolute bg-trending-2 rounded-full bottom-0 left-1/2 -translate-x-2/4 z-0;
+      }
+      &:first-child::before {
+        @apply bg-trending-1;
+      }
+
+      &:last-child::before {
+        @apply bg-trending-3;
+      }
+      img {
+        @apply relative z-10 block m-auto;
+      }
+      .badge {
+        @apply leading-none absolute gap-2 flex justify-between items-center z-20 bottom-0 right-0 p-2 rounded-xl bg-white shadow-lg font-bold;
+        svg {
+          max-width: 10px;
+          @apply  text-star;
+        }
+      }
+    }
+  }
+}

@@ -29,8 +29,6 @@ const CartActions: FC<ICartAction> = ({
 	const input = getInputProps();
 	const { removeFromCart, changeQuantity } = useActions();
 
-	console.log(productId, productSize);
-
 	return (
 		<div className='mt-2 flex items-center'>
 			<HStack maxW='90px'>

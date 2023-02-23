@@ -1,6 +1,14 @@
 .variations {
   @apply grid grid-cols-3 gap-2 h-max mt-4;
 
+  &.dark {
+    button {
+      @apply border-beige text-beige;
+      &.active {
+        @apply text-white bg-beige;
+      }
+    }
+  }
   button {
     @apply border border-solid border-white transition-colors py-0.5 px-2 text-center font-semibold text-sm bg-transparent text-white rounded text-[.8rem];
     &.active {

@@ -7,8 +7,13 @@
   .info-wrapper {
     @apply flex gap-4 items-center mt-4 overflow-hidden;
   }
+  &:hover {
+    .image {
+      transform: scale(1.03) translateY(-3%);
+    }
+  }
   .image {
-    @apply max-w-full -mt-28 mx-auto;
+    @apply max-w-full -mt-28 mx-auto transition duration-1000;
   }
   .heading {
     @apply text-xl capitalize text-beige mt-1 font-bold leading-8 transition;

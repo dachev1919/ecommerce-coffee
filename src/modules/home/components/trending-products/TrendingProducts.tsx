@@ -6,6 +6,7 @@ import { formatToCurrency } from '@/utils/format-to-currency';
 import { StarIcon } from '@chakra-ui/icons';
 import StarRatingComponent from 'react-star-rating-component';
 import TrendingProductsActions from './trending-products-actions/TrendingProductsActions';
+import Link from 'next/link';
 
 interface ITrendingProductsProps {}
 
@@ -16,7 +17,9 @@ const TrendingProducts: FunctionComponent<ITrendingProductsProps> = () => {
 	return (
 		<section className={styles['trending-products']}>
 			<div className={styles.info}>
-				<p className={styles.title}>{mainProduct.name}</p>
+				<Link href={`/ecommerce-coffee/product/${mainProduct.slug}`}>
+					<p className={styles.title}>{mainProduct.name}</p>
+				</Link>
 				<div className={styles.rating}>
 					<StarRatingComponent
 						name='rate1'
@@ -30,26 +33,30 @@ const TrendingProducts: FunctionComponent<ITrendingProductsProps> = () => {
 				<TrendingProductsActions product={mainProduct} />
 			</div>
 			<div className={styles.image}>
-				<Image
-					src={mainProduct.images[0]}
-					width={690}
-					height={690}
-					alt='main product'
-				/>
+				<Link href={`/ecommerce-coffee/product/${mainProduct.slug}`}>
+					<Image
+						src={mainProduct.images[0]}
+						width={690}
+						height={690}
+						alt='main product'
+					/>
+				</Link>
 			</div>
 			<div className={styles.miniatures}>
-				{recommendedProducts.map(({ id, images, rating }, index) => (
+				{recommendedProducts.map(({ id, images, rating, slug }, index) => (
 					<div key={id} className={styles.miniature}>
-						<Image
-							src={images[0]}
-							alt={`product ${index}`}
-							width={150}
-							height={150}
-						/>
-						<span className={styles.badge}>
-							{rating.toFixed(1)}
-							<StarIcon />
-						</span>
+						<Link href={`/ecommerce-coffee/product/${slug}`}>
+							<Image
+								src={images[0]}
+								alt={`product ${index}`}
+								width={150}
+								height={150}
+							/>
+							<span className={styles.badge}>
+								{rating.toFixed(1)}
+								<StarIcon />
+							</span>
+						</Link>
 					</div>
 				))}
 			</div>

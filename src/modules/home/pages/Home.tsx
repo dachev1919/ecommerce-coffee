@@ -14,7 +14,7 @@ const Home: FC = () => {
 			<Hero classNames=''>The happiest hour of the year</Hero>
 			<Carousel />
 			<TrendingProducts />
-			<RelatedProducts limit={8} />
+			<RelatedProducts title='Popular Products' limit={8} />
 		</Layout>
 	);
 };

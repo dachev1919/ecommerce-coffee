@@ -35,7 +35,7 @@ const CarouselItem: FC<ICarouselItemProps> = ({ product, itemIndex }) => {
 			})}
 		>
 			<div>
-				<Link href='/ecommerce-coffee'>
+				<Link href={`/ecommerce-coffee/product/${product.slug}`}>
 					<Image
 						className={styles.image}
 						alt={product.name}

@@ -20,12 +20,15 @@
       }
     }
     .title {
-      @apply text-6xl font-bold text-black;
+      @apply text-6xl font-bold text-black transition;
       @media screen and (max-width: 767px) {
         @apply text-5xl;
       }
       @media screen and (max-width: 575px) {
         @apply text-4xl;
+      }
+      &:hover {
+        @apply text-green;
       }
     }
     .price {
@@ -61,9 +64,14 @@
   .image {
     @apply relative flex justify-center items-center;
     flex: 1 1 calc(50% - 2rem);
+
+    &:hover::before {
+      transform: translateX(-50%) rotate(20deg) scale(1.025);
+    }
+
     &::before {
       content: '';
-      @apply absolute z-0 bg-green rounded-full left-1/2 -translate-x-2/4 bottom-0 overflow-hidden;
+      @apply absolute z-0 bg-green rounded-full left-1/2 -translate-x-2/4 bottom-0 overflow-hidden transition transition-transform duration-1000;
       width: 600px;
       max-width: 100%;
       height: 600px;
@@ -114,8 +122,13 @@
       &:last-child::before {
         @apply bg-trending-3;
       }
+      &:hover {
+        img {
+          transform: rotate(7deg) scale(1.1);
+        }
+      }
       img {
-        @apply relative z-10 block m-auto;
+        @apply relative z-10 block m-auto transition;
       }
       .badge {
         @apply leading-none absolute gap-2 flex justify-between items-center z-20 bottom-0 right-0 p-2 rounded-xl bg-white shadow-lg font-bold;

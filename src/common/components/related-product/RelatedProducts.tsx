@@ -8,9 +8,13 @@ import { productSorting } from '@/common/components/related-product/utils/produc
 
 interface IRelatedProductsProps {
 	limit?: number;
+	title?: string;
 }
 
-const RelatedProducts: FC<IRelatedProductsProps> = ({ limit = 4 }) => {
+const RelatedProducts: FC<IRelatedProductsProps> = ({
+	limit = 4,
+	title = 'Related Products'
+}) => {
 	const [sortType, setSortType] = useState<EnumSorting>(EnumSorting.NEWEST);
 	const [productList, setProductList] = useState<IProduct[]>(products);
 
@@ -21,7 +25,7 @@ const RelatedProducts: FC<IRelatedProductsProps> = ({ limit = 4 }) => {
 	return (
 		<section className={styles['related-products']}>
 			<div className={styles.heading}>
-				<p className={styles.title}>Related Products</p>
+				<p className={styles.title}>{title}</p>
 				<Sorting sortType={sortType} setSortType={setSortType} />
 			</div>
 			<div className={styles.products}>

@@ -1,5 +1,7 @@
 .miniature {
-  @apply rounded-3xl bg-light-gray relative p-5 pt-0 mb-20 mt-8 relative transform-none text-center;
+  @apply rounded-3xl relative p-5 pt-0 mb-20 mt-8 relative transform-none text-center;
+  background: rgba(232, 231, 227, 0.5);
+  backdrop-filter: saturate(180%) blur(5px);
 
   >div {
     @apply relative;

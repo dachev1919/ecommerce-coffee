@@ -13,13 +13,15 @@ interface ICarouselButtonProps {
 	selectedSize: TypeSize;
 	green?: boolean;
 	quantity?: number;
+	centering?: boolean;
 }
 
 const ProductAddButton: FC<ICarouselButtonProps> = ({
 	product,
 	selectedSize,
 	green,
-	quantity = 1
+	quantity = 1,
+	centering = true
 }) => {
 	const { addToCart, removeFromCart } = useActions();
 	const { items: cartItems } = useSelector(
@@ -43,12 +45,25 @@ const ProductAddButton: FC<ICarouselButtonProps> = ({
 		<Button
 			onClick={buttonClickHandler}
 			color={green ? COLORS.white : COLORS.green}
-			className='tracking-widest uppercase mx-auto block w-10/12'
+			sx={
+				green
+					? { boxShadow: '0px 5px 10px rgba(0, 124, 89, 0.25)' }
+					: { boxShadow: '0px 5px 10px rgba(255, 255, 255, 0.1)' }
+			}
+			className={`tracking-widest duration-300 transition uppercase block w-10/12${
+				centering ? ' mx-auto' : ''
+			}`}
 			marginTop={5}
 			_hover={
 				green
-					? { backgroundColor: COLORS['dark-green'] }
-					: { backgroundColor: theme.colors.gray['100'] }
+					? {
+							backgroundColor: COLORS['dark-green'],
+							boxShadow: '0px 6px 10px rgba(0, 124, 89, 0.3)'
+					  }
+					: {
+							backgroundColor: theme.colors.gray['100'],
+							boxShadow: '0px 6px 10px rgba(255, 255, 255, 0.2)'
+					  }
 			}
 			_active={
 				green

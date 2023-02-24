@@ -4,6 +4,9 @@
 
 .next-prev {
   @apply flex gap-6;
+  @media screen and (max-width: 575px) {
+    @apply hidden;
+  }
 
   a {
     @apply flex items-center transition;

@@ -6,7 +6,9 @@
 }
 
 .item {
-  @apply rounded-3xl bg-light-gray relative p-5 pt-0 mb-36 mt-8 relative transform-none;
+  @apply rounded-3xl relative p-5 pt-0 mb-36 mt-8 relative transform-none;
+  background: rgba(232, 231, 227, 0.5);
+  backdrop-filter: saturate(180%) blur(5px);
   flex: 0 0 calc(24%  - 1rem);
   transition: none;
 

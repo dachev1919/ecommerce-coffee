@@ -1,0 +1,122 @@
+.card {
+  @apply grid grid-cols-3 gap-6 p-10 relative mb-16;
+  @media screen and (max-width: 767px) {
+    @apply grid-cols-1;
+  }
+  border-radius: 2rem;
+  background: rgba(232, 231, 227, 0.5);
+  backdrop-filter: saturate(180%) blur(5px);
+}
+
+.information {
+  @apply flex flex-col gap-4 justify-center;
+  @media screen and (max-width: 767px) {
+    @apply text-center items-center;
+  }
+  h1 {
+    @apply text-dark-beige font-bold leading-tight text-4x1;
+    @media screen and (min-width: 991px) and (max-width: 1199px) {
+      @apply text-2xl;
+    }
+    @media screen and (min-width: 768px) and (max-width: 990px) {
+      @apply text-lg;
+    }
+  }
+  .description {
+    p {
+      @apply text-beige;
+      @media screen and (min-width: 768px) and (max-width: 990px) {
+        @apply text-xs;
+      }
+    }
+  }
+  .thumb {
+    @apply mt-4;
+    button {
+      @apply rounded-2xl bg-white mr-4 last:mr-0 relative transition;
+      @media screen and (min-width: 991px) and (max-width: 1199px) {
+        max-width: 65px;
+        max-height: 65px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 990px) {
+        @apply mr-2;
+        max-width: 55px;
+        max-height: 55px;
+      }
+      @media screen and (max-width: 575px) {
+        @apply mr-2;
+        max-width: 55px;
+        max-height: 55px;
+      }
+      img {
+        @apply -mt-3 mb-3;
+      }
+      &.active {
+        @apply bg-light-beige;
+      }
+    }
+  }
+
+}
+
+.image {
+  @apply text-center mb-8;
+  .wrapper {
+    @apply h-max w-max relative -mt-8 mb-8 max-w-full;
+    @media screen and (max-width: 767px) {
+      @apply ml-auto mr-auto;
+    }
+    img {
+      @apply relative z-10;
+    }
+    &::before {
+      @apply rounded-full shadow-light-gray shadow-2xl w-full h-full absolute top-16 left-0 z-0;
+      content: '';
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: saturate(180%) blur(5px);
+    }
+  }
+  .price {
+    @apply text-4xl font-bold text-dark-beige z-10 absolute -bottom-6 left-1/2 -translate-x-2/4;
+    @media screen and (min-width: 768px) and (max-width: 990px) {
+      @apply text-2xl;
+    }
+  }
+}
+
+.actions {
+  @apply flex flex-col gap-6 justify-center;
+  @media screen and (max-width: 767px) {
+    @apply text-center items-center;
+  }
+  div {
+    @apply flex items-center;
+    span {
+      @apply mr-4 text-beige;
+      @media screen and (min-width: 768px) and (max-width: 990px) {
+        @apply hidden;
+      }
+      @media screen and (max-width: 575px) {
+        @apply hidden;
+      }
+    }
+  }
+  .review {}
+  .variations {
+    > div {
+      @apply mt-0;
+    }
+  }
+  .quantity {}
+  .add {
+    @media screen and (max-width: 767px) {
+      @apply w-full justify-center;
+    }
+    button {
+      @apply m-0;
+      @media screen and (max-width: 1199px) {
+        width: 100% !important;
+      }
+    }
+  }
+}

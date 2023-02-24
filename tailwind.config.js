@@ -13,6 +13,7 @@ const constants = {
 	'gray-100': '#afafaf',
 	'gray-200': '#929292',
 	'gray-300': '#757575',
+	'light-beige': '#dad6d0',
 	beige: '#A49B8F',
 	'dark-beige': '#7e736c',
 	'trending-1': '#b3ba72',

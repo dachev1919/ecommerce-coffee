@@ -9,3 +9,7 @@ export interface IProduct {
 	date: string;
 	rating: number;
 }
+
+export interface IProductDetails {
+	product: IProduct;
+}

@@ -1,12 +1,8 @@
 import React, { FC } from 'react';
 import ProductDetails from '../../../src/modules/product-details/pages/ProductDetails';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { IProduct } from '@/@types/product.intarface';
+import { IProduct, IProductDetails } from '@/@types/product.intarface';
 import { products } from '@/common/mock-data/produtcs.data';
-
-export interface IProductDetails {
-	product: IProduct;
-}
 
 const ProductDetailsPage: FC<IProductDetails> = ({ product }) => {
 	return <ProductDetails product={product} />;

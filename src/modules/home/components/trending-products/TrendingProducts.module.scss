@@ -20,7 +20,7 @@
       }
     }
     .title {
-      @apply text-6xl font-bold text-black transition;
+      @apply text-6xl font-bold text-dark-beige transition;
       @media screen and (max-width: 767px) {
         @apply text-5xl;
       }
@@ -32,7 +32,7 @@
       }
     }
     .price {
-      @apply text-3xl flex gap-4 items-center tracking-widest font-semibold text-green;
+      @apply text-3xl flex gap-4 items-center tracking-widest font-bold text-green;
     }
     .description {
       @apply mt-4;

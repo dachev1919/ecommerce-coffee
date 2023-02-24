@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
 import Layout from '@/common/components/layout/Layout';
-import { IProductDetails } from '../../../../pages/ecommerce-coffee/product/[slug]';
 import RelatedProducts from '@/common/components/related-product/RelatedProducts';
-import ProductBreadcrumbs from '@/modules/product-details/components/product-breadcrumbs/ProductBreadcrumbs';
-import ProductNextPrev from '@/modules/product-details/components/product-next-prev/ProductNextPrev';
+import ProductBreadcrumbs from '../components/product-breadcrumbs/ProductBreadcrumbs';
+import ProductNextPrev from '../components/product-next-prev/ProductNextPrev';
 import styles from './ProductDetails.module.scss';
+import ProductCard from '../components/product-card/ProductCard';
+import { IProductDetails } from '@/@types/product.intarface';
 
 const ProductDetails: FC<IProductDetails> = ({ product }) => {
 	return (
@@ -13,6 +14,7 @@ const ProductDetails: FC<IProductDetails> = ({ product }) => {
 				<ProductBreadcrumbs productTitle={product.name} />
 				<ProductNextPrev currentId={product.id} />
 			</div>
+			<ProductCard product={product} />
 
 			<RelatedProducts />
 		</Layout>

@@ -1,6 +1,6 @@
 import { IMenuLink } from '@/@types/menu-item.interface';
 
-export const menu: IMenuLink[] = [
+export const footerMenu: IMenuLink[] = [
 	{
 		link: '/ecommerce-coffee',
 		name: 'Coffee'

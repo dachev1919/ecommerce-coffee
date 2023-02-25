@@ -12,7 +12,7 @@ interface IProps {
 	product: IProduct;
 }
 
-const TrendingProductsActions: FC<IProps> = ({ product }) => {
+const Actions: FC<IProps> = ({ product }) => {
 	const [selectedSize, setSelectedSize] = useState<TypeSize>('GRANDE');
 	const [productQuantity, setProductQuantity] = useState<number>(1);
 
@@ -94,4 +94,4 @@ const TrendingProductsActions: FC<IProps> = ({ product }) => {
 	);
 };
 
-export default TrendingProductsActions;
+export default Actions;

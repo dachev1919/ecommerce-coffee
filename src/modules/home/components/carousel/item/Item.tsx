@@ -16,7 +16,7 @@ interface ICarouselItemProps {
 	itemIndex: number;
 }
 
-const CarouselItem: FC<ICarouselItemProps> = ({ product, itemIndex }) => {
+const Item: FC<ICarouselItemProps> = ({ product, itemIndex }) => {
 	const { setCarouselActiveIndex } = useActions();
 	const [selectedSize, setSelectedSize] = useState<TypeSize>('GRANDE');
 	const { activeIndex: selectedItemIndex } = useCarouselHooks();
@@ -62,4 +62,4 @@ const CarouselItem: FC<ICarouselItemProps> = ({ product, itemIndex }) => {
 	);
 };
 
-export default CarouselItem;
+export default Item;

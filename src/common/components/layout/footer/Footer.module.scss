@@ -1,0 +1,35 @@
+.footer {
+  @apply flex flex-col items-center gap-8 m-auto;
+  max-width: 1536px;
+}
+
+.heading {}
+.menu {
+  ul {
+    @apply flex items-center gap-6;
+    a {
+      @apply uppercase transition tracking-widest relative;
+      &:hover {
+        &::after {
+          @apply w-full right-auto left-0;
+        }
+      }
+      &::after {
+        content: '';
+        @apply w-0 absolute right-0 -bottom-2 h-0.5 transition-all duration-300 bg-green;
+      }
+    }
+  }
+}
+.newsletter {
+  @apply flex gap-6 items-center justify-between w-full;
+  @media screen and (max-width: 575px) {
+    @apply flex-col;
+  }
+  > div {
+    @apply w-full w-80;
+  }
+  p {
+    @apply whitespace-nowrap text-dark-beige text-xs select-none;
+  }
+}

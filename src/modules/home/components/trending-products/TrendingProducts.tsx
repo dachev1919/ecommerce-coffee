@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { formatToCurrency } from '@/utils/format-to-currency';
 import { StarIcon } from '@chakra-ui/icons';
 import StarRatingComponent from 'react-star-rating-component';
-import TrendingProductsActions from './trending-products-actions/TrendingProductsActions';
+import Actions from './actions/Actions';
 import Link from 'next/link';
 
 interface ITrendingProductsProps {}
@@ -30,7 +30,7 @@ const TrendingProducts: FunctionComponent<ITrendingProductsProps> = () => {
 					<p className={styles.price}>{formatToCurrency(mainProduct.price)}</p>
 				</div>
 				<p className={styles.description}>{mainProduct.description}</p>
-				<TrendingProductsActions product={mainProduct} />
+				<Actions product={mainProduct} />
 			</div>
 			<div className={styles.image}>
 				<Link href={`/ecommerce-coffee/product/${mainProduct.slug}`}>

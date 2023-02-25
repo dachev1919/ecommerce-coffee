@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IMenuLink } from './menu-item.interface';
+import { IMenuLink } from '../../../../../../@types/menu-item.interface';
 import Link from 'next/link';
 
 interface IMenuItem {

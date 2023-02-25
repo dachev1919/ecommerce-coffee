@@ -83,7 +83,7 @@ export const products: IProduct[] = [
 	},
 	{
 		id: 7,
-		name: 'Vanilla latte swirl frappuccino',
+		name: 'Swirl latte with condensed milk',
 		slug: 'vanilla-latte-swirl-frappuccino',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',
@@ -95,7 +95,7 @@ export const products: IProduct[] = [
 	},
 	{
 		id: 8,
-		name: 'Salted caramel smoothie blend',
+		name: 'Salted caramel smoothie frappuccino',
 		slug: 'salted-caramel-smoothie-blend',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officiis.',

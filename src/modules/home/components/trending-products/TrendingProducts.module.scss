@@ -48,7 +48,7 @@
         @apply w-11/12;
       }
       @media screen and (max-width: 575px) {
-        @apply w-full;
+        @apply w-full flex-col;
       }
       button {
         @apply mt-0;

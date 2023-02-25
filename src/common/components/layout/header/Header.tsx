@@ -27,9 +27,11 @@ const Header: FC = () => {
 
 	return (
 		<header className={`${styles.header} ${isSticky ? styles.sticky : ''}`}>
-			<Menu />
-			<Search />
-			<Cart />
+			<div className={styles.wrapper}>
+				<Menu />
+				<Search />
+				<Cart />
+			</div>
 		</header>
 	);
 };

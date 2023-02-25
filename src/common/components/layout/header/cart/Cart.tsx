@@ -57,7 +57,7 @@ const Cart: FC = () => {
 							<p>Total:</p>
 							<span>{formatToCurrency(totalPrice)}</span>
 						</div>
-						<Link href='/ecommerce-coffee/checkout'>
+						<Link href='/checkout'>
 							<Button
 								bg={COLORS.green}
 								_hover={{ backgroundColor: COLORS['dark-green'] }}

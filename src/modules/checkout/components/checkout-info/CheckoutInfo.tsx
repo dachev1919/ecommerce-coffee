@@ -13,7 +13,7 @@ const CheckoutInfo: FC = () => {
 				{items.map(({ product, quantity }) => (
 					<div className={styles.product}>
 						<div className={styles.image}>
-							<Link href={`/ecommerce-coffee/product/${product.slug}`}>
+							<Link href={`/product/${product.slug}`}>
 								<Image
 									src={product.images[0]}
 									alt={`product-${product.id}`}
@@ -24,7 +24,7 @@ const CheckoutInfo: FC = () => {
 							</Link>
 						</div>
 						<div className={styles.name}>
-							<Link href={`/ecommerce-coffee/product/${product.slug}`}>
+							<Link href={`/product/${product.slug}`}>
 								<p>{product.name}</p>
 							</Link>
 						</div>

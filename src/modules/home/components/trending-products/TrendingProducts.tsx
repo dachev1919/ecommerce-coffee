@@ -17,7 +17,7 @@ const TrendingProducts: FunctionComponent<ITrendingProductsProps> = () => {
 	return (
 		<section className={styles['trending-products']}>
 			<div className={styles.info}>
-				<Link href={`/ecommerce-coffee/product/${mainProduct.slug}`}>
+				<Link href={`/product/${mainProduct.slug}`}>
 					<p className={styles.title}>{mainProduct.name}</p>
 				</Link>
 				<div className={styles.rating}>
@@ -33,7 +33,7 @@ const TrendingProducts: FunctionComponent<ITrendingProductsProps> = () => {
 				<Actions product={mainProduct} />
 			</div>
 			<div className={styles.image}>
-				<Link href={`/ecommerce-coffee/product/${mainProduct.slug}`}>
+				<Link href={`/product/${mainProduct.slug}`}>
 					<Image
 						src={mainProduct.images[0]}
 						width={690}
@@ -45,7 +45,7 @@ const TrendingProducts: FunctionComponent<ITrendingProductsProps> = () => {
 			<div className={styles.miniatures}>
 				{recommendedProducts.map(({ id, images, rating, slug }, index) => (
 					<div key={id} className={styles.miniature}>
-						<Link href={`/ecommerce-coffee/product/${slug}`}>
+						<Link href={`/product/${slug}`}>
 							<Image
 								src={images[0]}
 								alt={`product ${index}`}

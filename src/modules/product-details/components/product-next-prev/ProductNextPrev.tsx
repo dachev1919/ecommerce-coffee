@@ -26,10 +26,10 @@ const ProductNextPrev: FC<IProductNextPrevProps> = ({ currentId }) => {
 	const lastProduct: IProduct = products[products.length - 1];
 	const firstProduct: IProduct = products[0];
 
-	const prevLink = `/ecommerce-coffee/product/${
+	const prevLink = `/product/${
 		prevProduct ? prevProduct.slug : lastProduct.slug
 	}`;
-	const nextLink = `/ecommerce-coffee/product/${
+	const nextLink = `/product/${
 		nextProduct ? nextProduct.slug : firstProduct.slug
 	}`;
 

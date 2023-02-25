@@ -2,15 +2,15 @@ import { IMenuLink } from '@/@types/menu-item.interface';
 
 export const menu: IMenuLink[] = [
 	{
-		link: '/ecommerce-coffee',
+		link: '/',
 		name: 'Coffee'
 	},
 	{
-		link: '/ecommerce-coffee',
+		link: '/',
 		name: 'Tea'
 	},
 	{
-		link: '/ecommerce-coffee',
+		link: '/',
 		name: 'Menu'
 	}
 ];

@@ -22,7 +22,7 @@ const Menu: FC = () => {
 				<HamburgerIcon />
 			</div>
 
-			<Link href='/ecommerce-coffee'>
+			<Link href='/'>
 				<Image src={image} width={60} height={60} alt='ecommerce-coffee' />
 			</Link>
 			<nav className={`${visibleMobileMenu ? styles.visible : ''}`}>

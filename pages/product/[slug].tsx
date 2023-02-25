@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import ProductDetails from '../../../src/modules/product-details/pages/ProductDetails';
+import ProductDetails from '../../src/modules/product-details/pages/ProductDetails';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { IProduct, IProductDetails } from '@/@types/product.intarface';
 import { products } from '@/common/mock-data/produtcs.data';

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
+import React, { FC, useRef, useState } from 'react';
 import cn from 'clsx';
 import styles from '@/modules/home/components/carousel/Carousel.module.scss';
 import Image from 'next/image';
@@ -35,7 +35,7 @@ const Item: FC<ICarouselItemProps> = ({ product, itemIndex }) => {
 			})}
 		>
 			<div>
-				<Link href={`/ecommerce-coffee/product/${product.slug}`}>
+				<Link href={`/product/${product.slug}`}>
 					<Image
 						className={styles.image}
 						alt={product.name}

@@ -4,15 +4,12 @@ import Link from 'next/link';
 import awards from '@/common/assets/images/rewards.png';
 import Image from 'next/image';
 
-const Hero: FunctionComponent<PropsWithChildren<{ classNames?: string }>> = ({
-	children,
-	classNames
-}) => {
+const Hero: FunctionComponent<PropsWithChildren> = ({ children }) => {
 	return (
 		<section className={styles.hero}>
 			<div className={styles.left}>
 				<Image src={awards} alt='awards' width={150} height={50} />
-				<Link className={styles.link} href='/ecommerce-coffee'>
+				<Link className={styles.link} href='/pages'>
 					Get more info
 				</Link>
 			</div>
@@ -22,10 +19,7 @@ const Hero: FunctionComponent<PropsWithChildren<{ classNames?: string }>> = ({
 					Sign up to get exclusive access to deals on drinks this holiday
 					season.
 				</p>
-				<Link
-					className={`${styles.link} ${styles.green}`}
-					href='/ecommerce-coffee'
-				>
+				<Link className={`${styles.link} ${styles.green}`} href='/pages'>
 					Send me magic
 				</Link>
 			</div>

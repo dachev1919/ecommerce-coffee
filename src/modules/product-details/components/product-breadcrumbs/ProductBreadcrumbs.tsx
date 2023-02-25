@@ -11,7 +11,7 @@ const ProductBreadcrumbs: FC<IProductBreadcrumbsProps> = ({ productTitle }) => {
 	return (
 		<Breadcrumb color={COLORS.beige} marginY={10}>
 			<BreadcrumbItem>
-				<BreadcrumbLink as={Link} href='/ecommerce-coffee'>
+				<BreadcrumbLink as={Link} href='/'>
 					Home
 				</BreadcrumbLink>
 			</BreadcrumbItem>

@@ -1,14 +1,13 @@
 .search {
 	@apply relative w-1/3;
+	@media screen and (max-width: 576px) {
+		@apply hidden;
+	}
 
 	> div {
 		@apply relative;
 	}
 
-	&::before {
-		content: '';
-		@apply absolute bg-light-green rounded-full w-[110%] pt-[110%] -top-[15rem] -left-[5%];
-	}
 	&__input {
 		width: 70% !important;
 		outline: none!important;

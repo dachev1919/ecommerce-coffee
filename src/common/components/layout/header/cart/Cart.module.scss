@@ -1,4 +1,8 @@
 .cart {
+  @apply relative z-10;
+  @media screen and (max-width: 576px) {
+    @apply pl-4;
+  }
   .heading {
     @apply flex items-center gap-1;
     .badge {

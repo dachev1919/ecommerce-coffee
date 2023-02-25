@@ -1,7 +1,30 @@
 .hero {
   @apply flex justify-between;
+  @media screen and (max-width: 575px) {
+    @apply flex-col items-center gap-4 py-4;
+  }
+  &::before {
+    content: '';
+    z-index: 0;
+    @apply absolute bg-light-green rounded-full w-[35%] pt-[35%] -top-[15rem] left-[56%] -translate-x-1/2;
+    @media screen and (min-width: 768px) and (max-width: 990px) {
+      @apply -top-[12rem] w-[45%] pt-[45%];
+    }
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+      @apply -top-[10rem] w-[50%] pt-[50%];
+    }
+  }
   .h1 {
     @apply w-3/4 leading-snug font-black text-green text-6xl ml-auto;
+    @media screen and (min-width: 768px) and (max-width: 990px) {
+      @apply text-4xl;
+    }
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+      @apply text-3xl;
+    }
+    @media screen and (max-width: 575px) {
+      @apply text-center w-full text-5xl;
+    }
   }
   .link {
     @apply uppercase text-sm border-gray-200 text-gray-200 leading-snug transition;
@@ -12,15 +35,30 @@
     &:hover {
       @apply text-green;
     }
+    @media screen and (min-width: 768px) and (max-width: 990px) {
+      @apply text-xs;
+    }
   }
 
   .right {
-    @apply text-right;
+    @apply relative text-right;
+    @media screen and (max-width: 575px) {
+      @apply text-center;
+    }
   }
   .left {
-    @apply flex flex-col justify-center items-start
+    @apply relative flex flex-col justify-center items-start;
   }
   .text {
-    @apply text-gray-200 mt-4;
+    @apply  text-gray-200 mt-4;
+    @media screen and (min-width: 576px) and (max-width: 990px) {
+      @apply w-2/4 ml-auto;
+    }
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+      @apply text-xs;
+    }
+    @media screen and (max-width: 575px) {
+      @apply text-center;
+    }
   }
 }

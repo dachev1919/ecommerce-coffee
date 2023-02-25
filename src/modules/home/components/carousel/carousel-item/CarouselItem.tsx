@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import cn from 'clsx';
 import styles from '@/modules/home/components/carousel/Carousel.module.scss';
 import Image from 'next/image';

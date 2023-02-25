@@ -1,10 +1,42 @@
 .menu {
 	@apply flex items-center gap-4;
-	> nav {
-		> ul {
+	@media screen and (max-width: 576px) {
+		@apply justify-between;
+		flex: 0 1 50%;
+	}
+	nav {
+		@media screen and (max-width: 767px) {
+			@apply fixed left-0 top-0 z-50 w-full items-start justify-start flex overflow-auto opacity-0 pointer-events-none;
+			transition: all .3s ease;
+			height: 100vh;
+			.overlay {
+				@apply w-full h-full absolute z-0;
+				background: rgba(0,0,0,.5);
+
+			}
+			ul {
+				@apply flex-col h-full p-4 bg-white justify-center relative;
+				transition: transform .3s ease;
+				width: 20rem;
+				transform: translateX(-320px);
+			}
+			&.visible {
+				@apply opacity-100 pointer-events-auto;
+				ul {
+					transform: translateX(0);
+				}
+			}
+		}
+		.close {
+			@apply absolute right-4 top-4 z-50;
+			@media screen and (min-width: 767px) {
+				@apply hidden;
+			}
+		}
+		ul {
 			@apply flex items-center gap-6;
-			> li {
-				> a {
+			li {
+				a {
 					@apply uppercase transition tracking-widest relative;
 					&:hover {
 						&::after {
@@ -17,6 +49,15 @@
 					}
 				}
 			}
+		}
+	}
+	.hamburger {
+		@apply p-2 text-lg transition cursor-pointer;
+		&:hover, &:active {
+			@apply text-green;
+		}
+		@media screen and (min-width: 768px) {
+			@apply hidden;
 		}
 	}
 }

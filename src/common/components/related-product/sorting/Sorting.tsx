@@ -45,7 +45,7 @@ const relatedProductsColors = extendTheme({
 	text: '#a49b8f',
 	colors: {
 		brand: {
-			500: '#E8E7E3'
+			500: '#F3F3F1'
 		}
 	}
 });

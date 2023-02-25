@@ -1,0 +1,29 @@
+.info {
+  >div {
+    border-bottom: 1px solid;
+    @apply border-light-gray pb-4 mb-4 last:mb-0 last:pb-0 last:border-none;
+  }
+  .products {
+    .product {
+      @apply flex justify-between mb-4 last:mb-0 items-center;
+      .image {
+        @apply relative;
+        .badge {
+          @apply leading-none absolute gap-2 flex justify-between text-dark-beige items-center z-20 text-[.6rem] bottom-0 right-0 p-1 rounded-xl bg-white shadow-lg font-bold;
+        }
+      }
+      .name {
+        @apply text-xs text-dark-beige px-4;
+      }
+      .price {
+        @apply font-bold text-dark-beige;
+      }
+    }
+  }
+  .text {
+    @apply flex justify-between mb-4 last:mb-0 text-dark-beige;
+    span {
+      @apply font-bold text-dark-beige;
+    }
+  }
+}

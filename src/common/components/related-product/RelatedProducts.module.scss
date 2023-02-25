@@ -2,7 +2,7 @@
   .products {
     @apply grid gap-4 mt-28;
 
-    grid-template-columns: repeat(auto-fill,minmax(calc(288px + (350 - 288) * ((100vw - 320px) / (1920 - 320))),1fr));
+    grid-template-columns: repeat(auto-fill,minmax(calc(288px + (340 - 288) * ((100vw - 320px) / (1920 - 320))),1fr));
   }
 
   .heading {

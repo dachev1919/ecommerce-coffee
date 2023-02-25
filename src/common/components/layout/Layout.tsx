@@ -14,7 +14,7 @@ const Layout: FC<PropsWithChildren<ILayout>> = ({ children, ...rest }) => {
 			<div className={styles.layout}>
 				<main>
 					<Header />
-					<section className={styles.content}>{children}</section>
+					<div className={styles.content}>{children}</div>
 					<Footer />
 				</main>
 			</div>

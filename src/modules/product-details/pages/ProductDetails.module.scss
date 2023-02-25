@@ -1,5 +1,9 @@
 .header {
   @apply flex items-center justify-between;
+  @media screen and (max-width: 1584px) {
+    padding-left: calc(15px + (48 - 15) * ((100vw - 320px) / (1584 - 320)));
+    padding-right: calc(15px + (48 - 15) * ((100vw - 320px) / (1584 - 320)));
+  }
 }
 
 .next-prev {

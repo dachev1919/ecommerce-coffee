@@ -1,5 +1,9 @@
 .footer {
-  @apply flex flex-col items-center gap-8 m-auto;
+  @apply flex flex-col items-center gap-8 m-auto py-5;
+  @media screen and (max-width: 1584px) {
+    padding-left: calc(15px + (48 - 15) * ((100vw - 320px) / (1584 - 320)));
+    padding-right: calc(15px + (48 - 15) * ((100vw - 320px) / (1584 - 320)));
+  }
   max-width: 1536px;
 }
 
@@ -28,6 +32,9 @@
   }
   > div {
     @apply w-full w-80;
+    input {
+      @apply uppercase tracking-widest border-gray-100;
+    }
   }
   p {
     @apply whitespace-nowrap text-dark-beige text-xs select-none;

@@ -1,0 +1,41 @@
+.checkout {
+  @apply text-center py-8;
+
+  h1 {
+    @apply text-green font-bold text-6xl mb-6;
+    @media screen and (min-width: 768px) and (max-width: 990px) {
+      @apply text-5xl;
+    }
+    @media screen and (max-width: 767px) {
+      @apply text-3xl;
+    }
+  }
+
+  .body {
+    @apply grid grid-cols-2 gap-4 pt-8;
+    @media screen and (max-width: 767px) {
+      @apply grid-cols-1;
+    }
+
+    @media screen and (min-width: 991px) {
+      @apply grid-cols-3;
+    }
+    >div {
+      @apply border border-light-gray rounded-2xl p-8;
+      &:first-child {
+        @media screen and (min-width: 991px) {
+          @apply col-span-2;
+        }
+        @media screen and (max-width: 767px) {
+          @apply order-2;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  input {
+    @apply mb-4;
+  }
+}

@@ -9,14 +9,16 @@ const ProductCard: FC<IProductDetails> = ({ product }) => {
 	const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
 	return (
-		<section className={styles.card}>
-			<ProductInformation
-				product={product}
-				currentImageIndex={currentImageIndex}
-				setCurrentImageIndex={setCurrentImageIndex}
-			/>
-			<ProductImage product={product} currentImageIndex={currentImageIndex} />
-			<ProductActions product={product} />
+		<section>
+			<div className={styles.card}>
+				<ProductInformation
+					product={product}
+					currentImageIndex={currentImageIndex}
+					setCurrentImageIndex={setCurrentImageIndex}
+				/>
+				<ProductImage product={product} currentImageIndex={currentImageIndex} />
+				<ProductActions product={product} />
+			</div>
 		</section>
 	);
 };

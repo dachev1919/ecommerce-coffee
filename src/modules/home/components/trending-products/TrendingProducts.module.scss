@@ -131,7 +131,7 @@
         @apply relative z-10 block m-auto transition;
       }
       .badge {
-        @apply leading-none absolute gap-2 flex justify-between items-center z-20 bottom-0 right-0 p-2 rounded-xl bg-white shadow-lg font-bold;
+        @apply leading-none absolute text-dark-beige gap-2 flex justify-between items-center z-20 bottom-0 right-0 p-2 rounded-xl bg-white shadow-lg font-bold;
         svg {
           max-width: 10px;
           @apply  text-star;

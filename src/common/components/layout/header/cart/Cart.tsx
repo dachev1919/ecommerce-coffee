@@ -15,6 +15,7 @@ import {
 import { formatToCurrency } from '@/utils/format-to-currency';
 import { useStoreHooks } from '@/utils/use-store-hooks';
 import { COLORS } from '@/config/color.config';
+import Link from 'next/link';
 
 const Cart: FC = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -56,14 +57,16 @@ const Cart: FC = () => {
 							<p>Total:</p>
 							<span>{formatToCurrency(totalPrice)}</span>
 						</div>
-						<Button
-							bg={COLORS.green}
-							_hover={{ backgroundColor: COLORS['dark-green'] }}
-							_active={{ backgroundColor: COLORS['black-green'] }}
-							colorScheme='green'
-						>
-							Checkout
-						</Button>
+						<Link href='/ecommerce-coffee/checkout'>
+							<Button
+								bg={COLORS.green}
+								_hover={{ backgroundColor: COLORS['dark-green'] }}
+								_active={{ backgroundColor: COLORS['black-green'] }}
+								colorScheme='green'
+							>
+								Checkout
+							</Button>
+						</Link>
 					</DrawerFooter>
 				</DrawerContent>
 			</Drawer>

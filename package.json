@@ -2,6 +2,7 @@
   "name": "ecommerce-coffee",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dachev1919.github.io/ecommerce-coffee",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.5.1",
@@ -19,6 +20,7 @@
     "@types/react-star-rating-component": "^1.4.1",
     "clsx": "^1.2.1",
     "framer-motion": "^9.0.3",
+    "gh-pages": "^5.0.0",
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -1,17 +1,17 @@
 .card {
-  @apply grid grid-cols-3 gap-6 p-10 relative mb-16;
-  @media screen and (max-width: 767px) {
-    @apply grid-cols-1;
-  }
-  border-radius: 2rem;
-  background: rgba(232, 231, 227, 0.5);
-  backdrop-filter: saturate(180%) blur(5px);
+    @apply grid grid-cols-3 gap-6 p-10 relative mb-16;
+    @media screen and (max-width: 767px) {
+      @apply grid-cols-1 p-5;
+    }
+    border-radius: 2rem;
+    background: rgba(232, 231, 227, 0.5);
+    backdrop-filter: saturate(180%) blur(5px);
 }
 
 .information {
   @apply flex flex-col gap-4 justify-center;
   @media screen and (max-width: 767px) {
-    @apply text-center items-center;
+    @apply text-center items-center mb-8;
   }
   h1 {
     @apply text-dark-beige font-bold leading-tight text-4x1;
@@ -20,6 +20,9 @@
     }
     @media screen and (min-width: 768px) and (max-width: 990px) {
       @apply text-lg;
+    }
+    @media screen and (max-width: 575px) {
+      @apply text-3xl;
     }
   }
   .description {
@@ -77,7 +80,7 @@
     }
   }
   .price {
-    @apply text-4xl font-bold text-dark-beige z-10 absolute -bottom-6 left-1/2 -translate-x-2/4;
+    @apply text-4xl font-bold text-dark-beige z-10 absolute -bottom-10 left-1/2 -translate-x-2/4;
     @media screen and (min-width: 768px) and (max-width: 990px) {
       @apply text-2xl;
     }

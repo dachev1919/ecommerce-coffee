@@ -5,11 +5,11 @@ import { products } from '@/common/mock-data/produtcs.data';
 
 const Carousel: FC = () => {
 	return (
-		<div className={styles.carousel}>
+		<section className={styles.carousel}>
 			{products.slice(0, 4).map((item, index) => (
 				<Item itemIndex={index} key={item.id} product={item} />
 			))}
-		</div>
+		</section>
 	);
 };
 

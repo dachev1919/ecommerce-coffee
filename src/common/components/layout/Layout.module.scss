@@ -1,13 +1,15 @@
 .layout {
 	> main {
-		@apply bg-white py-8 px-10;
-
-		@media screen and (max-width: 576px) {
-			@apply px-4;
-		}
+		@apply bg-white;
 
 		> .content {
 			@apply relative max-w-screen-2xl m-auto;
+		}
+	}
+	section {
+		@media screen and (max-width: 1584px) {
+			padding-left: calc(15px + (48 - 15) * ((100vw - 320px) / (1584 - 320)));
+			padding-right: calc(15px + (48 - 15) * ((100vw - 320px) / (1584 - 320)));
 		}
 	}
 }

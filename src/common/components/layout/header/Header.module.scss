@@ -1,6 +1,10 @@
 .header {
 	@apply flex w-full items-center justify-between mb-4 m-auto z-10 relative py-2 transition;
 	max-width: 1536px;
+	@media screen and (max-width: 1584px) {
+		padding-left: calc(15px + (48 - 15) * ((100vw - 320px) / (1584 - 320)));
+		padding-right: calc(15px + (48 - 15) * ((100vw - 320px) / (1584 - 320)));
+	}
 	&.sticky {
 		position: sticky;
 		top: 0;

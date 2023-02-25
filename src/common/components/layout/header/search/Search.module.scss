@@ -11,7 +11,7 @@
 	&__input {
 		width: 70% !important;
 		outline: none!important;
-		@apply block m-auto border-t-transparent border-l-transparent border-r-transparent;
+		@apply block m-auto;
 		input {
 			@apply uppercase tracking-widest border-gray-100;
 		}
